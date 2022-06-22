@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Task Master</title>
+<title>Notekeeper</title>
 {% endblock %}
 
 {% block body %}
 <div class="content">
     <h1 style="text-align: center">Task Master</h1>
     {% if tasks|length < 1 %}
-    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+    <h4 style="text-align: center">No hay notas!Agrega una a continuacion:</h4>
     {% else %}
     <table>
         <tr>
-            <th>Task</th>
-            <th>Added</th>
-            <th>Actions</th>
+            <th>Notas</th>
+            <th>Agregadas</th>
+            <th>Acciones</th>
         </tr>
         {% for task in tasks %}
             <tr>
