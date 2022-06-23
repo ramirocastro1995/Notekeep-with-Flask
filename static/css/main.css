@@ -1,8 +1,16 @@
 body, html {
     margin: 0;
-    font-family: sans-serif;
-    background-color: rgb(174, 216, 97);
+    font-family: FreeMono, monospace;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
 }
+input{
+    padding:8px;
+    border-radius:10px;
+    background-color: antiquewhite;
+}
+
 
 .content {
     margin: 0 auto;
@@ -29,6 +37,7 @@ td {
 
 .form {
     margin-top: 20px;
+    
 }
 
 #content {

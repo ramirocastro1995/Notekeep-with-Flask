@@ -8,6 +8,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
+#Creamos la base en sql
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
@@ -15,6 +16,8 @@ class Todo(db.Model):
 
     def __repr__(self):
         return '<Task %r>' % self.id
+
+#Creamos la funcion de indexear una nota
 
 @app.route('/', methods =['POST', 'GET'])
 def index():
@@ -32,6 +35,7 @@ def index():
         tasks = Todo.query.order_by(Todo.date_created).all()
         return render_template('index.html', tasks=tasks)
 
+#Creamos la funcion de borrar una nota
 
 @app.route('/delete/<int:id>')
 def delete(id):
@@ -43,6 +47,8 @@ def delete(id):
         return redirect('/')
     except : 
         return 'Hubo un problema borrando esa nota'
+
+#Creamos la funcion de updatear una nota
 
 @app.route('/update/<int:id>', methods =['POST', 'GET'])
 def update(id):
@@ -60,7 +66,7 @@ def update(id):
     else:
         return render_template('update.html', task = task)
 
-
+#main loop
 
 if __name__ == "__main__":
     app.run(debug=True)
