@@ -2,13 +2,13 @@ body, html {
     margin: 0;
     font-family: FreeMono, monospace;
     background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: radial-gradient(circle, rgb(183, 141, 209) 0%, rgb(12, 86, 171) 100%);
 
 }
 input{
     padding:8px;
     border-radius:10px;
-    background-color: antiquewhite;
+    background-color: rgb(209, 231, 235);
 }
 
 
