@@ -1,4 +1,5 @@
 # Notekeep-with-Flask
-https://notekeeperflask.herokuapp.com/
+https://notekeep-2ak8.onrender.com/
 
-Board comunitario hecho con Python/Flask y con una base de datos en SQL.
+Community board to leave comments and messages!
+Made with Flask
